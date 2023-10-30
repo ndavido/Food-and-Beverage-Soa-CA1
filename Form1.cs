@@ -25,7 +25,12 @@ namespace Food_and_Beverage
 
             var response = client.Execute(request);
 
-            Beverages.Text = response.Content;
+            Rootobject_Beverage beverageRootObject = JsonSerializer.Deserialize<Rootobject_Beverage>(response.Content);
+
+            foreach (var beverage in beverageRootObject.drinks)
+            {
+                BeveragesListBox.Items.Add(beverage.strDrink);
+            }
         }
 
         private void Load_Food()
@@ -35,7 +40,12 @@ namespace Food_and_Beverage
 
             var response = client.Execute(request);
 
-            Food.Text = response.Content;
+            Rootobject_Food foodRootObject = JsonSerializer.Deserialize<Rootobject_Food>(response.Content);
+
+            foreach (var food in foodRootObject.meals)
+            {
+                FoodListBox.Items.Add(food.strMeal);
+            }
         }
 
         private void Beverages_TextChanged(object sender, EventArgs e)

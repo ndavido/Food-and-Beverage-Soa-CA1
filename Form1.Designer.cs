@@ -28,46 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Beverages = new System.Windows.Forms.TextBox();
-            this.Food = new System.Windows.Forms.TextBox();
+            this.BeveragesListBox = new System.Windows.Forms.ListBox();
+            this.FoodListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // Beverages
+            // BeveragesListBox
             // 
-            this.Beverages.Location = new System.Drawing.Point(107, 56);
-            this.Beverages.Multiline = true;
-            this.Beverages.Name = "Beverages";
-            this.Beverages.Size = new System.Drawing.Size(379, 402);
-            this.Beverages.TabIndex = 0;
-            this.Beverages.TextChanged += new System.EventHandler(this.Beverages_TextChanged);
+            this.BeveragesListBox.FormattingEnabled = true;
+            this.BeveragesListBox.ItemHeight = 20;
+            this.BeveragesListBox.Location = new System.Drawing.Point(12, 12);
+            this.BeveragesListBox.Name = "BeveragesListBox";
+            this.BeveragesListBox.Size = new System.Drawing.Size(137, 464);
+            this.BeveragesListBox.TabIndex = 2;
             // 
-            // Food
+            // FoodListBox
             // 
-            this.Food.Location = new System.Drawing.Point(626, 56);
-            this.Food.Multiline = true;
-            this.Food.Name = "Food";
-            this.Food.Size = new System.Drawing.Size(379, 402);
-            this.Food.TabIndex = 1;
-            this.Food.TextChanged += new System.EventHandler(this.Food_TextChanged);
+            this.FoodListBox.FormattingEnabled = true;
+            this.FoodListBox.ItemHeight = 20;
+            this.FoodListBox.Location = new System.Drawing.Point(155, 12);
+            this.FoodListBox.Name = "FoodListBox";
+            this.FoodListBox.Size = new System.Drawing.Size(137, 464);
+            this.FoodListBox.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1188, 503);
-            this.Controls.Add(this.Food);
-            this.Controls.Add(this.Beverages);
+            this.Controls.Add(this.FoodListBox);
+            this.Controls.Add(this.BeveragesListBox);
             this.Name = "Form1";
             this.Text = "Food & Bevarage Selector";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private TextBox Beverages;
-        private TextBox Food;
+        private ListBox BeveragesListBox;
+        private ListBox FoodListBox;
     }
 }
