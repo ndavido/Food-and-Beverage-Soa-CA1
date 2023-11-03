@@ -88,9 +88,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(78, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 28);
+            this.label1.Size = new System.Drawing.Size(271, 28);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Dawid Nalepa CA1 - D00239107";
+            this.label1.Text = "Meal and Beverage Selector";
             // 
             // pictureBox1
             // 
@@ -226,7 +226,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Food & Bevarage Selector";
+            this.Text = "Dawid Nalepa CA1 - D00239107";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
