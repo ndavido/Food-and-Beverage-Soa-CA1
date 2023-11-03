@@ -1,6 +1,7 @@
 using System.Text.Json;
 using RestSharp.Serializers;
 using RestSharp;
+using Food_and_Beverage.UserControls;
 
 namespace Food_and_Beverage
 {
@@ -9,8 +10,37 @@ namespace Food_and_Beverage
         public Form1()
         {
             InitializeComponent();
+            HomeControl uc = new();
+            addUserControl(uc);
+
             Load_Beverages();
             Load_Food();
+        }
+
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            HomeControl uc = new();
+            addUserControl(uc);
+        }
+
+        private void BeveregeBtn_Click(object sender, EventArgs e)
+        {
+            BeverageControl uc = new();
+            addUserControl(uc);
+        }
+
+        private void MealBtn_Click(object sender, EventArgs e)
+        {
+            MealControl uc = new();
+            addUserControl(uc);
         }
 
         private void Form1_Load(object sender, EventArgs e)
