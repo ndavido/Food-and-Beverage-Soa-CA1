@@ -36,8 +36,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            this.BeveragesListBox = new System.Windows.Forms.ListBox();
-            this.FoodListBox = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,24 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BeveragesListBox
-            // 
-            this.BeveragesListBox.FormattingEnabled = true;
-            this.BeveragesListBox.ItemHeight = 20;
-            this.BeveragesListBox.Location = new System.Drawing.Point(579, 252);
-            this.BeveragesListBox.Name = "BeveragesListBox";
-            this.BeveragesListBox.Size = new System.Drawing.Size(137, 224);
-            this.BeveragesListBox.TabIndex = 2;
-            // 
-            // FoodListBox
-            // 
-            this.FoodListBox.FormattingEnabled = true;
-            this.FoodListBox.ItemHeight = 20;
-            this.FoodListBox.Location = new System.Drawing.Point(758, 252);
-            this.FoodListBox.Name = "FoodListBox";
-            this.FoodListBox.Size = new System.Drawing.Size(137, 224);
-            this.FoodListBox.TabIndex = 3;
             // 
             // panel1
             // 
@@ -219,8 +199,6 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(936, 506);
-            this.Controls.Add(this.FoodListBox);
-            this.Controls.Add(this.BeveragesListBox);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -237,9 +215,6 @@
         }
 
         #endregion
-
-        private ListBox BeveragesListBox;
-        private ListBox FoodListBox;
         private Panel panel1;
         private PictureBox pictureBox1;
         private Label label1;

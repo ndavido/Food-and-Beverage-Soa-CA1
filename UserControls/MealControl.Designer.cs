@@ -30,13 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.FoodListBox = new System.Windows.Forms.ListBox();
+            this.ingredientsTextBox = new System.Windows.Forms.TextBox();
+            this.mealPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.mealPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(172, 165);
+            this.label1.Location = new System.Drawing.Point(181, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 54);
             this.label1.TabIndex = 1;
@@ -46,19 +49,40 @@
             // 
             this.FoodListBox.FormattingEnabled = true;
             this.FoodListBox.ItemHeight = 20;
-            this.FoodListBox.Location = new System.Drawing.Point(-9, 0);
+            this.FoodListBox.Location = new System.Drawing.Point(0, 0);
             this.FoodListBox.Name = "FoodListBox";
             this.FoodListBox.Size = new System.Drawing.Size(175, 384);
             this.FoodListBox.TabIndex = 4;
+            // 
+            // ingredientsTextBox
+            // 
+            this.ingredientsTextBox.Location = new System.Drawing.Point(181, 3);
+            this.ingredientsTextBox.Multiline = true;
+            this.ingredientsTextBox.Name = "ingredientsTextBox";
+            this.ingredientsTextBox.ReadOnly = true;
+            this.ingredientsTextBox.Size = new System.Drawing.Size(125, 159);
+            this.ingredientsTextBox.TabIndex = 5;
+            // 
+            // mealPictureBox
+            // 
+            this.mealPictureBox.Location = new System.Drawing.Point(321, 3);
+            this.mealPictureBox.Name = "mealPictureBox";
+            this.mealPictureBox.Size = new System.Drawing.Size(192, 159);
+            this.mealPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mealPictureBox.TabIndex = 6;
+            this.mealPictureBox.TabStop = false;
             // 
             // MealControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.mealPictureBox);
+            this.Controls.Add(this.ingredientsTextBox);
             this.Controls.Add(this.FoodListBox);
             this.Controls.Add(this.label1);
             this.Name = "MealControl";
             this.Size = new System.Drawing.Size(936, 384);
+            ((System.ComponentModel.ISupportInitialize)(this.mealPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,5 +92,7 @@
 
         private Label label1;
         private ListBox FoodListBox;
+        private TextBox ingredientsTextBox;
+        private PictureBox mealPictureBox;
     }
 }
