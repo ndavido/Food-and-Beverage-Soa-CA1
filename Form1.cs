@@ -13,8 +13,8 @@ namespace Food_and_Beverage
             HomeControl uc = new();
             addUserControl(uc);
 
-            Load_Beverages();
-            Load_Food();
+            //Load_Beverages();
+            //Load_Food();
         }
 
         private void addUserControl(UserControl userControl)
@@ -48,35 +48,35 @@ namespace Food_and_Beverage
 
         }
 
-        private void Load_Beverages()
-        {
-            var client = new RestClient("https://www.thecocktaildb.com/api/json/v1/1/search.php?s");
-            var request = new RestRequest();
+        //private void Load_Beverages()
+        //{
+        //    var client = new RestClient("https://www.thecocktaildb.com/api/json/v1/1/search.php?s");
+        //    var request = new RestRequest();
 
-            var response = client.Execute(request);
+        //    var response = client.Execute(request);
 
-            Rootobject_Beverage beverageRootObject = JsonSerializer.Deserialize<Rootobject_Beverage>(response.Content);
+        //    Rootobject_Beverage beverageRootObject = JsonSerializer.Deserialize<Rootobject_Beverage>(response.Content);
 
-            foreach (var beverage in beverageRootObject.drinks)
-            {
-                BeveragesListBox.Items.Add(beverage.strDrink);
-            }
-        }
+        //    foreach (var beverage in beverageRootObject.drinks)
+        //    {
+        //        BeveragesListBox.Items.Add(beverage.strDrink);
+        //    }
+        //}
 
-        private void Load_Food()
-        {
-            var client = new RestClient("https://www.themealdb.com/api/json/v1/1/search.php?s");
-            var request = new RestRequest();
+        //private void Load_Food()
+        //{
+        //    var client = new RestClient("https://www.themealdb.com/api/json/v1/1/search.php?s");
+        //    var request = new RestRequest();
 
-            var response = client.Execute(request);
+        //    var response = client.Execute(request);
 
-            Rootobject_Food foodRootObject = JsonSerializer.Deserialize<Rootobject_Food>(response.Content);
+        //    Rootobject_Food foodRootObject = JsonSerializer.Deserialize<Rootobject_Food>(response.Content);
 
-            foreach (var food in foodRootObject.meals)
-            {
-                FoodListBox.Items.Add(food.strMeal);
-            }
-        }
+        //    foreach (var food in foodRootObject.meals)
+        //    {
+        //        FoodListBox.Items.Add(food.strMeal);
+        //    }
+        //}
 
         private void Beverages_TextChanged(object sender, EventArgs e)
         {
