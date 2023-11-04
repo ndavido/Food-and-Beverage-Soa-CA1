@@ -14,7 +14,7 @@ namespace Food_and_Beverage
 {
     public partial class MealControl : UserControl
     {
-        private List<Meal> _mealList; // Assuming Meal is the correct class for the food items
+        private List<Meal> _mealList; 
 
         public MealControl()
         {
@@ -40,28 +40,25 @@ namespace Food_and_Beverage
 
         private void FoodListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ingredientsListBox.Items.Clear();
+
             if (FoodListBox.SelectedIndex != -1)
             {
                 var selectedMeal = _mealList[FoodListBox.SelectedIndex];
 
-                // Assuming you have a PictureBox named 'mealPictureBox'
-                // and a Label or TextBox named 'ingredientsTextBox' for displaying the ingredients.
-                mealPictureBox.Load(selectedMeal.strMealThumb); // Load image from URL.
+                mealPictureBox.Load(selectedMeal.strMealThumb);
+                instructionTextBox.Text = selectedMeal.strInstructions;
 
-                // Concatenate ingredients into a single string.
                 var ingredients = new StringBuilder();
-                for (int i = 1; i <= 20; i++) // Adjust the number as per the meal ingredients available.
+                for (int i = 1; i <= 20; i++)
                 {
                     var ingredientProp = selectedMeal.GetType().GetProperty($"strIngredient{i}");
                     var ingredient = (string)ingredientProp?.GetValue(selectedMeal);
                     if (!string.IsNullOrWhiteSpace(ingredient))
                     {
-                        ingredients.AppendLine(ingredient);
+                        ingredientsListBox.Items.Add(ingredient);
                     }
                 }
-
-                // Assuming you have a control to display ingredients.
-                ingredientsTextBox.Text = ingredients.ToString();
             }
         }
     }

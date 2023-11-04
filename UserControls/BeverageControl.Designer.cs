@@ -31,24 +31,27 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.BeveragesListBox = new System.Windows.Forms.ListBox();
-            this.ingredientsTextBox = new System.Windows.Forms.TextBox();
             this.beveragePictureBox = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.ingredientsListBox = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.instructionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.beveragePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(181, 165);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(621, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 54);
+            this.label1.Size = new System.Drawing.Size(250, 37);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Beverage Page";
+            this.label1.Text = "List of Ingredients";
             // 
             // BeveragesListBox
             // 
+            this.BeveragesListBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BeveragesListBox.FormattingEnabled = true;
             this.BeveragesListBox.ItemHeight = 20;
             this.BeveragesListBox.Location = new System.Drawing.Point(0, 0);
@@ -56,20 +59,12 @@
             this.BeveragesListBox.Size = new System.Drawing.Size(175, 384);
             this.BeveragesListBox.TabIndex = 3;
             // 
-            // ingredientsTextBox
-            // 
-            this.ingredientsTextBox.Location = new System.Drawing.Point(181, 3);
-            this.ingredientsTextBox.Multiline = true;
-            this.ingredientsTextBox.Name = "ingredientsTextBox";
-            this.ingredientsTextBox.ReadOnly = true;
-            this.ingredientsTextBox.Size = new System.Drawing.Size(125, 159);
-            this.ingredientsTextBox.TabIndex = 4;
-            // 
             // beveragePictureBox
             // 
-            this.beveragePictureBox.Location = new System.Drawing.Point(323, 3);
+            this.beveragePictureBox.Image = global::Food_and_Beverage.Properties.Resources.imageLoad;
+            this.beveragePictureBox.Location = new System.Drawing.Point(175, 0);
             this.beveragePictureBox.Name = "beveragePictureBox";
-            this.beveragePictureBox.Size = new System.Drawing.Size(192, 159);
+            this.beveragePictureBox.Size = new System.Drawing.Size(384, 384);
             this.beveragePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.beveragePictureBox.TabIndex = 5;
             this.beveragePictureBox.TabStop = false;
@@ -80,12 +75,44 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // ingredientsListBox
+            // 
+            this.ingredientsListBox.BackColor = System.Drawing.Color.White;
+            this.ingredientsListBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ingredientsListBox.FormattingEnabled = true;
+            this.ingredientsListBox.ItemHeight = 20;
+            this.ingredientsListBox.Location = new System.Drawing.Point(621, 40);
+            this.ingredientsListBox.Name = "ingredientsListBox";
+            this.ingredientsListBox.Size = new System.Drawing.Size(250, 144);
+            this.ingredientsListBox.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(621, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 37);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Instructions";
+            // 
+            // instructionTextBox
+            // 
+            this.instructionTextBox.Location = new System.Drawing.Point(621, 227);
+            this.instructionTextBox.Multiline = true;
+            this.instructionTextBox.Name = "instructionTextBox";
+            this.instructionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.instructionTextBox.Size = new System.Drawing.Size(250, 134);
+            this.instructionTextBox.TabIndex = 9;
+            // 
             // BeverageControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.instructionTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.ingredientsListBox);
             this.Controls.Add(this.beveragePictureBox);
-            this.Controls.Add(this.ingredientsTextBox);
             this.Controls.Add(this.BeveragesListBox);
             this.Controls.Add(this.label1);
             this.Name = "BeverageControl";
@@ -100,8 +127,10 @@
 
         private Label label1;
         private ListBox BeveragesListBox;
-        private TextBox ingredientsTextBox;
         private PictureBox beveragePictureBox;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private ListBox ingredientsListBox;
+        private Label label2;
+        private TextBox instructionTextBox;
     }
 }

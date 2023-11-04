@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.FoodListBox = new System.Windows.Forms.ListBox();
-            this.ingredientsTextBox = new System.Windows.Forms.TextBox();
             this.mealPictureBox = new System.Windows.Forms.PictureBox();
+            this.ingredientsListBox = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.instructionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.mealPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(181, 165);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Meals Page";
             // 
             // FoodListBox
             // 
@@ -54,32 +46,65 @@
             this.FoodListBox.Size = new System.Drawing.Size(175, 384);
             this.FoodListBox.TabIndex = 4;
             // 
-            // ingredientsTextBox
-            // 
-            this.ingredientsTextBox.Location = new System.Drawing.Point(181, 3);
-            this.ingredientsTextBox.Multiline = true;
-            this.ingredientsTextBox.Name = "ingredientsTextBox";
-            this.ingredientsTextBox.ReadOnly = true;
-            this.ingredientsTextBox.Size = new System.Drawing.Size(125, 159);
-            this.ingredientsTextBox.TabIndex = 5;
-            // 
             // mealPictureBox
             // 
-            this.mealPictureBox.Location = new System.Drawing.Point(321, 3);
+            this.mealPictureBox.Image = global::Food_and_Beverage.Properties.Resources.imageLoad;
+            this.mealPictureBox.Location = new System.Drawing.Point(175, 0);
             this.mealPictureBox.Name = "mealPictureBox";
-            this.mealPictureBox.Size = new System.Drawing.Size(192, 159);
+            this.mealPictureBox.Size = new System.Drawing.Size(384, 384);
             this.mealPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.mealPictureBox.TabIndex = 6;
             this.mealPictureBox.TabStop = false;
+            // 
+            // ingredientsListBox
+            // 
+            this.ingredientsListBox.BackColor = System.Drawing.Color.White;
+            this.ingredientsListBox.FormattingEnabled = true;
+            this.ingredientsListBox.ItemHeight = 20;
+            this.ingredientsListBox.Location = new System.Drawing.Point(621, 40);
+            this.ingredientsListBox.Name = "ingredientsListBox";
+            this.ingredientsListBox.Size = new System.Drawing.Size(250, 144);
+            this.ingredientsListBox.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(621, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 37);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "List of Ingredients";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(621, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 37);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Instructions";
+            // 
+            // instructionTextBox
+            // 
+            this.instructionTextBox.Location = new System.Drawing.Point(621, 227);
+            this.instructionTextBox.Multiline = true;
+            this.instructionTextBox.Name = "instructionTextBox";
+            this.instructionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.instructionTextBox.Size = new System.Drawing.Size(250, 134);
+            this.instructionTextBox.TabIndex = 10;
             // 
             // MealControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.mealPictureBox);
-            this.Controls.Add(this.ingredientsTextBox);
-            this.Controls.Add(this.FoodListBox);
+            this.Controls.Add(this.instructionTextBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ingredientsListBox);
+            this.Controls.Add(this.mealPictureBox);
+            this.Controls.Add(this.FoodListBox);
             this.Name = "MealControl";
             this.Size = new System.Drawing.Size(936, 384);
             ((System.ComponentModel.ISupportInitialize)(this.mealPictureBox)).EndInit();
@@ -89,10 +114,11 @@
         }
 
         #endregion
-
-        private Label label1;
         private ListBox FoodListBox;
-        private TextBox ingredientsTextBox;
         private PictureBox mealPictureBox;
+        private ListBox ingredientsListBox;
+        private Label label1;
+        private Label label2;
+        private TextBox instructionTextBox;
     }
 }

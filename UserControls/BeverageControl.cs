@@ -40,29 +40,27 @@ namespace Food_and_Beverage
 
         private void BeveragesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ingredientsListBox.Items.Clear();
+
             if (BeveragesListBox.SelectedIndex != -1)
             {
                 var selectedBeverage = _beverageList[BeveragesListBox.SelectedIndex];
 
-                // Assuming you have a PictureBox named 'beveragePictureBox'
-                // and a Label or TextBox named 'ingredientsTextBox' for displaying the ingredients.
-                beveragePictureBox.Load(selectedBeverage.strDrinkThumb); // Load image from URL.
+                beveragePictureBox.Load(selectedBeverage.strDrinkThumb); 
+                instructionTextBox.Text = selectedBeverage.strInstructions;
 
-                // Concatenate ingredients into a single string.
                 var ingredients = new StringBuilder();
-                for (int i = 1; i <= 15; i++) // Assuming you have up to 15 ingredients.
+                for (int i = 1; i <= 15; i++) 
                 {
                     var ingredientProp = selectedBeverage.GetType().GetProperty($"strIngredient{i}");
                     var ingredient = (string)ingredientProp?.GetValue(selectedBeverage);
                     if (!string.IsNullOrWhiteSpace(ingredient))
                     {
-                        ingredients.AppendLine(ingredient);
+                        ingredientsListBox.Items.Add(ingredient);
                     }
                 }
-
-                // Assuming you have a control to display ingredients.
-                ingredientsTextBox.Text = ingredients.ToString();
             }
         }
+
     }
 }
