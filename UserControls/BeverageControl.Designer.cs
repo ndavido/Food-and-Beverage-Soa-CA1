@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.label1 = new System.Windows.Forms.Label();
             this.BeveragesListBox = new System.Windows.Forms.ListBox();
             this.beveragePictureBox = new System.Windows.Forms.PictureBox();
@@ -36,6 +38,7 @@
             this.ingredientsListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.instructionTextBox = new System.Windows.Forms.TextBox();
+            this.savedBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.beveragePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +59,7 @@
             this.BeveragesListBox.ItemHeight = 20;
             this.BeveragesListBox.Location = new System.Drawing.Point(0, 0);
             this.BeveragesListBox.Name = "BeveragesListBox";
-            this.BeveragesListBox.Size = new System.Drawing.Size(175, 384);
+            this.BeveragesListBox.Size = new System.Drawing.Size(175, 324);
             this.BeveragesListBox.TabIndex = 3;
             // 
             // beveragePictureBox
@@ -105,10 +108,33 @@
             this.instructionTextBox.Size = new System.Drawing.Size(250, 134);
             this.instructionTextBox.TabIndex = 9;
             // 
+            // savedBtn
+            // 
+            this.savedBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.savedBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.savedBtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.savedBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.savedBtn.CustomizableEdges = customizableEdges1;
+            this.savedBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.savedBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.savedBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.savedBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.savedBtn.FillColor = System.Drawing.Color.White;
+            this.savedBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.savedBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.savedBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.savedBtn.Location = new System.Drawing.Point(0, 326);
+            this.savedBtn.Name = "savedBtn";
+            this.savedBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.savedBtn.Size = new System.Drawing.Size(175, 58);
+            this.savedBtn.TabIndex = 12;
+            this.savedBtn.Text = "Saved Recipes";
+            // 
             // BeverageControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.savedBtn);
             this.Controls.Add(this.instructionTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ingredientsListBox);
@@ -132,5 +158,6 @@
         private ListBox ingredientsListBox;
         private Label label2;
         private TextBox instructionTextBox;
+        private Guna.UI2.WinForms.Guna2Button savedBtn;
     }
 }
