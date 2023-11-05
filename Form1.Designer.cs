@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.MealBtn = new Guna.UI2.WinForms.Guna2Button();
             this.BeveregeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.HomeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.savedBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,7 +85,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.guna2Button3);
+            this.panel2.Controls.Add(this.savedBtn);
             this.panel2.Controls.Add(this.MealBtn);
             this.panel2.Controls.Add(this.BeveregeBtn);
             this.panel2.Controls.Add(this.HomeBtn);
@@ -94,28 +94,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(936, 64);
             this.panel2.TabIndex = 5;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.guna2Button3.CustomizableEdges = customizableEdges1;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.Location = new System.Drawing.Point(693, 3);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            this.guna2Button3.Size = new System.Drawing.Size(225, 58);
-            this.guna2Button3.TabIndex = 9;
-            this.guna2Button3.Text = "Home";
             // 
             // MealBtn
             // 
@@ -195,6 +173,28 @@
             this.panelContainer.Size = new System.Drawing.Size(936, 384);
             this.panelContainer.TabIndex = 6;
             // 
+            // savedBtn
+            // 
+            this.savedBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.savedBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.savedBtn.CheckedState.FillColor = System.Drawing.Color.White;
+            this.savedBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.savedBtn.CustomizableEdges = customizableEdges1;
+            this.savedBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.savedBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.savedBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.savedBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.savedBtn.FillColor = System.Drawing.Color.White;
+            this.savedBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.savedBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.savedBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.savedBtn.Location = new System.Drawing.Point(711, 3);
+            this.savedBtn.Name = "savedBtn";
+            this.savedBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            this.savedBtn.Size = new System.Drawing.Size(225, 58);
+            this.savedBtn.TabIndex = 9;
+            this.savedBtn.Text = "Saved Recipes";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -219,10 +219,10 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button MealBtn;
         private Guna.UI2.WinForms.Guna2Button BeveregeBtn;
         private Guna.UI2.WinForms.Guna2Button HomeBtn;
         private Panel panelContainer;
+        private Guna.UI2.WinForms.Guna2Button savedBtn;
     }
 }
