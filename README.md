@@ -34,3 +34,7 @@ I found it challenging to understand how parsing JSON Data works, and this forum
 I wanted to give the code a small error handling in case the json file does not exist. This forum explained how to creatr a new file if it doesn't exist.
 
 [Stack Overflow: Create File if Not Exists](https://stackoverflow.com/questions/10383053/create-file-if-file-does-not-exist)
+
+## Logo Design
+### Chat GPT
+I asked the DALL-E model to create a unique logo for my application based on the description of my Windows Form.
