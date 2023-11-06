@@ -100,8 +100,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.saveBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.saveBtn.CheckedState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.saveBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.saveBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.saveBtn.CustomizableEdges = customizableEdges1;
@@ -112,7 +111,7 @@
             this.saveBtn.FillColor = System.Drawing.Color.White;
             this.saveBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.saveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.saveBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.saveBtn.HoverState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.saveBtn.Location = new System.Drawing.Point(0, 326);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;

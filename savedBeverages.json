@@ -30,5 +30,23 @@
       "Powdered sugar"
     ],
     "Instructions": "Shake together in a cocktail shaker, then strain into chilled glass. Garnish and serve."
+  },
+  {
+    "Name": "252",
+    "ImageUrl": "https://www.thecocktaildb.com/images/media/drink/rtpxqw1468877562.jpg",
+    "Ingredients": [
+      "151 proof rum",
+      "Wild Turkey"
+    ],
+    "Instructions": "Add both ingredients to shot glass, shoot, and get drunk quick"
+  },
+  {
+    "Name": "Kir",
+    "ImageUrl": "https://www.thecocktaildb.com/images/media/drink/apneom1504370294.jpg",
+    "Ingredients": [
+      "Creme de Cassis",
+      "Champagne"
+    ],
+    "Instructions": "Add the cr\u00E8me de cassis to the bottom of the glass, then top up with wine."
   }
 ]

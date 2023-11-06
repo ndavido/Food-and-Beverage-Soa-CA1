@@ -98,7 +98,7 @@
             // savedBtn
             // 
             this.savedBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.savedBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.savedBtn.CheckedState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.savedBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.savedBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.savedBtn.CustomizableEdges = customizableEdges1;
@@ -109,7 +109,7 @@
             this.savedBtn.FillColor = System.Drawing.Color.White;
             this.savedBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.savedBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.savedBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.savedBtn.HoverState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.savedBtn.Location = new System.Drawing.Point(711, 3);
             this.savedBtn.Name = "savedBtn";
             this.savedBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -121,7 +121,7 @@
             // MealBtn
             // 
             this.MealBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.MealBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.MealBtn.CheckedState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.MealBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.MealBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.MealBtn.CustomizableEdges = customizableEdges3;
@@ -132,7 +132,7 @@
             this.MealBtn.FillColor = System.Drawing.Color.White;
             this.MealBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MealBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MealBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.MealBtn.HoverState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.MealBtn.Location = new System.Drawing.Point(462, 3);
             this.MealBtn.Name = "MealBtn";
             this.MealBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -144,7 +144,7 @@
             // BeveregeBtn
             // 
             this.BeveregeBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.BeveregeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.BeveregeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.BeveregeBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.BeveregeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.BeveregeBtn.CustomizableEdges = customizableEdges5;
@@ -155,7 +155,7 @@
             this.BeveregeBtn.FillColor = System.Drawing.Color.White;
             this.BeveregeBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BeveregeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BeveregeBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.BeveregeBtn.HoverState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.BeveregeBtn.Location = new System.Drawing.Point(231, 3);
             this.BeveregeBtn.Name = "BeveregeBtn";
             this.BeveregeBtn.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -168,7 +168,7 @@
             // 
             this.HomeBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.HomeBtn.Checked = true;
-            this.HomeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.HomeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.HomeBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.HomeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.HomeBtn.CustomizableEdges = customizableEdges7;
@@ -179,7 +179,7 @@
             this.HomeBtn.FillColor = System.Drawing.Color.White;
             this.HomeBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.HomeBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
+            this.HomeBtn.HoverState.CustomBorderColor = System.Drawing.Color.DarkSlateBlue;
             this.HomeBtn.Location = new System.Drawing.Point(0, 3);
             this.HomeBtn.Name = "HomeBtn";
             this.HomeBtn.ShadowDecoration.CustomizableEdges = customizableEdges8;
