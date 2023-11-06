@@ -16,13 +16,7 @@ namespace Food_and_Beverage
     public partial class MealControl : UserControl
     {
         private List<Meal> _mealList;
-        public class SavedMeal
-        {
-            public string Name { get; set; }
-            public string ImageUrl { get; set; }
-            public List<string> Ingredients { get; set; } = new List<string>();
-            public string Instructions { get; set; }
-        }
+
         public MealControl()
         {
             InitializeComponent();
@@ -84,7 +78,7 @@ namespace Food_and_Beverage
 
             var selectedMeal = _mealList[FoodListBox.SelectedIndex];
 
-            var savedMeal = new SavedMeal
+            var savedMeal = new SavedRecipe
             {
                 Name = selectedMeal.strMeal,
                 ImageUrl = selectedMeal.strMealThumb,
@@ -108,11 +102,9 @@ namespace Food_and_Beverage
                 File.WriteAllText(filePath, "[]");
             }
 
-            // Read the existing JSON array from the file and deserialize it.
             string existingJson = File.ReadAllText(filePath);
-            var mealList = JsonSerializer.Deserialize<List<SavedMeal>>(existingJson) ?? new List<SavedMeal>();
+            var mealList = JsonSerializer.Deserialize<List<SavedRecipe>>(existingJson) ?? new List<SavedRecipe>();
 
-            // Check if the meal is already saved.
             if (mealList.Any(m => m.Name == savedMeal.Name))
             {
                 MessageBox.Show("This recipe is already saved.", "Duplicate Recipe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -121,7 +113,6 @@ namespace Food_and_Beverage
             {
                 mealList.Add(savedMeal);
 
-                // Serialize the list back to JSON and write it to the file.
                 string updatedJson = JsonSerializer.Serialize(mealList, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(filePath, updatedJson);
 

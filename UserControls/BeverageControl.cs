@@ -16,13 +16,7 @@ namespace Food_and_Beverage
     public partial class BeverageControl : UserControl
     {
         private List<Drink> _beverageList;
-        public class SavedBeverage
-        {
-            public string Name { get; set; }
-            public string ImageUrl { get; set; }
-            public List<string> Ingredients { get; set; } = new List<string>();
-            public string Instructions { get; set; }
-        }
+
         public BeverageControl()
         {
             InitializeComponent();
@@ -84,7 +78,7 @@ namespace Food_and_Beverage
 
             var selectedBeverage = _beverageList[BeveragesListBox.SelectedIndex];
 
-            var savedBeverage = new SavedBeverage
+            var savedBeverage = new SavedRecipe
             {
                 Name = selectedBeverage.strDrink,
                 ImageUrl = selectedBeverage.strDrinkThumb,
@@ -109,7 +103,7 @@ namespace Food_and_Beverage
             }
 
             string existingJson = File.ReadAllText(filePath);
-            var beverageList = JsonSerializer.Deserialize<List<SavedBeverage>>(existingJson) ?? new List<SavedBeverage>();
+            var beverageList = JsonSerializer.Deserialize<List<SavedRecipe>>(existingJson) ?? new List<SavedRecipe>();
 
             if (beverageList.Any(b => b.Name == savedBeverage.Name))
             {

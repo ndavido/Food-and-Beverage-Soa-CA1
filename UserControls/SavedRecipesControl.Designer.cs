@@ -36,6 +36,7 @@
             this.instructionTextBox = new System.Windows.Forms.TextBox();
             this.SavedMealBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mealPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.SavedBeverageBox.Name = "SavedBeverageBox";
             this.SavedBeverageBox.Size = new System.Drawing.Size(175, 144);
             this.SavedBeverageBox.TabIndex = 5;
+            this.SavedBeverageBox.SelectedIndexChanged += new System.EventHandler(this.SavedBeverageBox_SelectedIndexChanged);
             // 
             // mealPictureBox
             // 
@@ -116,10 +118,21 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Saved Meals";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(621, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(250, 37);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "List of Ingredients";
+            // 
             // SavedRecipesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SavedMealBox);
             this.Controls.Add(this.instructionTextBox);
@@ -146,5 +159,6 @@
         private TextBox instructionTextBox;
         private ListBox SavedMealBox;
         private Label label3;
+        private Label label4;
     }
 }
