@@ -69,62 +69,61 @@ namespace Food_and_Beverage
             }
         }
 
-        private const string savedBeveragesFilePath = "savedBeverages.json"; // Ensure this is the correct path
-
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            if (BeveragesListBox.SelectedIndex != -1)
-            {
-                var selectedBeverage = _beverageList[BeveragesListBox.SelectedIndex];
-
-                // Create a new SavedBeverage object from the selected beverage
-                var savedBeverage = new SavedBeverage
-                {
-                    Name = selectedBeverage.strDrink,
-                    ImageUrl = selectedBeverage.strDrinkThumb,
-                    Ingredients = GetIngredients(selectedBeverage),
-                    Instructions = selectedBeverage.strInstructions
-                };
-
-                // Load existing beverages from file
-                var savedBeverages = LoadBeveragesFromFile();
-
-                // Add the new beverage
-                savedBeverages.Add(savedBeverage);
-
-                // Serialize the updated list to JSON
-                var json = JsonSerializer.Serialize(savedBeverages, new JsonSerializerOptions { WriteIndented = true });
-
-                // Write the JSON back to the file
-                File.WriteAllText(savedBeveragesFilePath, json);
-            }
+            SaveSelectedBeverage();
         }
 
-        private List<string> GetIngredients(Drink drink)
+        private void SaveSelectedBeverage()
         {
-            var ingredients = new List<string>();
+            if (BeveragesListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a recipe first.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var selectedBeverage = _beverageList[BeveragesListBox.SelectedIndex];
+
+            var savedBeverage = new SavedBeverage
+            {
+                Name = selectedBeverage.strDrink,
+                ImageUrl = selectedBeverage.strDrinkThumb,
+                Instructions = selectedBeverage.strInstructions
+            };
+
             for (int i = 1; i <= 15; i++)
             {
-                var ingredientProp = drink.GetType().GetProperty($"strIngredient{i}");
-                var ingredient = (string)ingredientProp?.GetValue(drink);
+                var ingredientProp = selectedBeverage.GetType().GetProperty($"strIngredient{i}");
+                var ingredient = (string)ingredientProp?.GetValue(selectedBeverage);
                 if (!string.IsNullOrWhiteSpace(ingredient))
                 {
-                    ingredients.Add(ingredient);
+                    savedBeverage.Ingredients.Add(ingredient);
                 }
             }
-            return ingredients;
-        }
 
-        private List<SavedBeverage> LoadBeveragesFromFile()
-        {
-            // If the file exists, read it and deserialize the content.
-            // Otherwise, just return a new list.
-            if (File.Exists(savedBeveragesFilePath))
+            string filePath = "C:\\Y4\\Soa\\CA1\\Food and Beverage\\savedBeverages.json"; // Copy your full path here
+
+            if (!File.Exists(filePath))
             {
-                string json = File.ReadAllText(savedBeveragesFilePath);
-                return JsonSerializer.Deserialize<List<SavedBeverage>>(json) ?? new List<SavedBeverage>();
+                File.WriteAllText(filePath, "[]");
             }
-            return new List<SavedBeverage>();
+
+            string existingJson = File.ReadAllText(filePath);
+            var beverageList = JsonSerializer.Deserialize<List<SavedBeverage>>(existingJson) ?? new List<SavedBeverage>();
+
+            if (beverageList.Any(b => b.Name == savedBeverage.Name))
+            {
+                MessageBox.Show("This recipe is already saved.", "Duplicate Recipe", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                beverageList.Add(savedBeverage);
+
+                string updatedJson = JsonSerializer.Serialize(beverageList, new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(filePath, updatedJson);
+
+                MessageBox.Show("Recipe saved successfully.", "Recipe Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.FoodListBox = new System.Windows.Forms.ListBox();
             this.mealPictureBox = new System.Windows.Forms.PictureBox();
             this.ingredientsListBox = new System.Windows.Forms.ListBox();
@@ -104,7 +104,7 @@
             this.saveBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.saveBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.saveBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.saveBtn.CustomizableEdges = customizableEdges3;
+            this.saveBtn.CustomizableEdges = customizableEdges1;
             this.saveBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.saveBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.saveBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -115,10 +115,11 @@
             this.saveBtn.HoverState.CustomBorderColor = System.Drawing.Color.Red;
             this.saveBtn.Location = new System.Drawing.Point(0, 326);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            this.saveBtn.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.saveBtn.Size = new System.Drawing.Size(175, 58);
             this.saveBtn.TabIndex = 11;
             this.saveBtn.Text = "Save Recipe";
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // MealControl
             // 

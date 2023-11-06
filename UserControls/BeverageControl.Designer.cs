@@ -111,7 +111,6 @@
             // saveBtn
             // 
             this.saveBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.saveBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.saveBtn.CheckedState.FillColor = System.Drawing.Color.White;
             this.saveBtn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.saveBtn.CustomizableEdges = customizableEdges1;
